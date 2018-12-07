@@ -1,0 +1,112 @@
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9,  user-scalable=no">
+    <title>MD-Admin</title>
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/lib.js"></script>
+
+</head>
+<body class="mdui-theme-accent-deep-orange mdui-theme-primary-blue-grey index_bg mdui-drawer-body-left mdui-appbar-with-toolbar">
+    <!--抽屉导航栏的顶栏-->
+    <div class="mdui-container">
+        <header class="mdui-appbar mdui-appbar-fixed">
+            <div class="mdui-toolbar mdui-color-theme ">
+                <button  onclick="inst.toggle()" class="mdui-btn mdui-btn-icon mdui-text-color-white" ><i class="mdui-icon material-icons">menu</i></button>
+                <p class="mdui-typo-headline mdui-text-color-white">控制台</p>
+                <div class="mdui-toolbar-spacer"></div>
+                <p class="mdui-btn mdui-text-color-white" onclick="drop_out()">退出</p>
+            </div>
+        </header>
+    </div>
+
+    <!--页面内容放置区域-->
+    <div class="mdui-container doc-container">
+        <div class="mdui-p-t-4">
+            <!--列表的控制栏目-->
+            <div class="mdui-card">
+                <div class="mdui-card-actions">
+                    <button class="mdui-btn mdui-ripple">全选</button>
+                    <button class="mdui-btn mdui-ripple">操作2</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-p-t-2">
+            <div class="mdui-table-fluid">
+                <table class="mdui-table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>#</th>
+                        <th>列1</th>
+                        <th>列2</th>
+                        <th>列3</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label class="mdui-checkbox">
+                                <input type="checkbox"/>
+                                <i class="mdui-checkbox-icon"></i>
+                            </label>
+                        </td>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button class="mdui-btn mdui-color-theme mdui-text-color-white">按键</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="mdui-checkbox">
+                                <input type="checkbox"/>
+                                <i class="mdui-checkbox-icon"></i>
+                            </label>
+                        </td>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>
+                            <button class="mdui-btn mdui-color-theme mdui-text-color-white">按键</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="mdui-checkbox">
+                                <input type="checkbox"/>
+                                <i class="mdui-checkbox-icon"></i>
+                            </label>
+                        </td>
+                        <td>3</td>
+                        <td>Larry the Bird</td>
+                        <td></td>
+                        <td>@twitter</td>
+                        <td>
+                            <button class="mdui-btn mdui-color-theme mdui-text-color-white">按键</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+<!--引入自定义js-->
+<script type="text/javascript" src="js/mdui.min.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+
+<script type="text/javascript">
+    loadNavation("body",true);
+    let inst=new mdui.Drawer('#drawer',{swipe:true});
+
+</script>
+</html>
