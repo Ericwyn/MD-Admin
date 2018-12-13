@@ -5,6 +5,9 @@ function loadNavation(domName, isOpen) {
     let flag = "";
     if (!isOpen){
         flag = "mdui-drawer-close";
+        document.body.classList.remove("mdui-drawer-body-left")
+    }else {
+        document.body.classList.add("mdui-drawer-body-left")
     }
     document.getElementsByTagName("body")[0].innerHTML+=
     `<div class="mdui-container ">
